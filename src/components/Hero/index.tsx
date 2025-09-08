@@ -13,23 +13,28 @@ const Hero = () => {
             <div className="w-full px-4">
               <div className="mx-auto max-w-[800px] text-center">
                 <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
- Devuni: Tu Partner en Desarrollo de Software Personalizado
+                  Devuni: Tu Partner en Desarrollo de Software Personalizado
                 </h1>
                 <p className="mb-12 text-base leading-relaxed! text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
- En Devuni, creamos experiencias digitales a medida. Desde potentes webs y aplicaciones móviles intuitivas hasta automatizaciones inteligentes y sistemas personalizados, somos tu socio tecnológico para impulsar tu negocio.
+                  En Devuni, creamos experiencias digitales a medida. Desde
+                  potentes webs y aplicaciones móviles intuitivas hasta
+                  automatizaciones inteligentes y sistemas personalizados, somos
+                  tu socio tecnológico para impulsar tu negocio.
                 </p>
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   <Link
                     href="#contact"
+                    title="Contacta con Devuni para un presupuesto"
                     className="rounded-xs bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
                   >
-                    🔥 Get Pro
+                    Contáctanos
                   </Link>
                   <Link
-                    href="https://github.com/NextJSTemplates/startup-nextjs"
+                    href="#services"
+                    title="Explora nuestros servicios de desarrollo"
                     className="inline-block rounded-xs bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
                   >
-                    Star on GitHub
+                    Nuestros Servicios
                   </Link>
                 </div>
               </div>
@@ -42,6 +47,7 @@ const Hero = () => {
             height="556"
             viewBox="0 0 450 556"
             fill="none"
+            aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
           >
             <circle
@@ -180,6 +186,7 @@ const Hero = () => {
             height="201"
             viewBox="0 0 364 201"
             fill="none"
+            aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path

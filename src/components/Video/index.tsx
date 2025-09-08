@@ -13,8 +13,8 @@ export default function Video() {
       <section className="relative z-10 py-16 md:py-20 lg:py-28">
         <div className="container">
           <SectionTitle
-            title="We are ready to help"
-            paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+            title="De la Idea a la Realidad Digital"
+            paragraph="Nos apasiona transformar ideas en soluciones de software funcionales y elegantes. Vea cómo nuestro equipo de expertos puede dar vida a su próximo proyecto."
             center
             mb="80px"
           />
@@ -62,7 +62,7 @@ export default function Video() {
         isOpen={isOpen}
         onClose={() => setOpen(false)}
         channel="youtube"
-        videoId="L61p2uyiMSo"
+        videoId="L61p2uyiMSo" // TODO: Reemplazar por un video de la empresa
       />
     </>
   );

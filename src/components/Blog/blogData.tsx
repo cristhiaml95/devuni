@@ -3,44 +3,44 @@ import { Blog } from "@/types/blog";
 const blogData: Blog[] = [
   {
     id: 1,
-    title: "Best UI components for modern websites",
+    title: "5 Ventajas de Usar Next.js para tu Próxima Web App",
     paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
+      "Descubre por qué Next.js se ha convertido en el framework de React preferido para construir aplicaciones web modernas, rápidas y escalables.",
     image: "/images/blog/blog-01.jpg",
     author: {
-      name: "Samuyl Joshi",
-      image: "/images/blog/author-03.png",
-      designation: "Graphic Designer",
+      name: "Javier Gómez",
+      image: "/images/blog/author-01.png",
+      designation: "Desarrollador Frontend",
     },
-    tags: ["creative"],
+    tags: ["Next.js", "Web"],
     publishDate: "2025",
   },
   {
     id: 2,
-    title: "9 simple ways to improve your design skills",
+    title: "¿Nativa o Híbrida? Cómo Elegir la Mejor Opción para tu App",
     paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
+      "Analizamos las diferencias clave entre el desarrollo de aplicaciones nativas e híbridas para ayudarte a tomar la mejor decisión para tu proyecto.",
     image: "/images/blog/blog-02.jpg",
     author: {
-      name: "Musharof Chy",
+      name: "María López",
       image: "/images/blog/author-02.png",
-      designation: "Content Writer",
+      designation: "Desarrolladora Móvil",
     },
-    tags: ["computer"],
+    tags: ["Mobile", "Apps"],
     publishDate: "2025",
   },
   {
     id: 3,
-    title: "Tips to quickly improve your coding speed.",
+    title: "Automatiza tus Procesos y Aumenta la Productividad",
     paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
+      "La automatización de procesos (RPA) puede ser un cambio de juego para tu negocio. Te contamos cómo empezar y qué beneficios puedes esperar.",
     image: "/images/blog/blog-03.jpg",
     author: {
-      name: "Lethium Deo",
+      name: "David Chen",
       image: "/images/blog/author-03.png",
-      designation: "Graphic Designer",
+      designation: "Especialista en Automatización",
     },
-    tags: ["design"],
+    tags: ["Automatización", "RPA"],
     publishDate: "2025",
   },
 ];

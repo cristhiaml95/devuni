@@ -5,28 +5,28 @@ import SingleTestimonial from "./SingleTestimonial";
 const testimonialData: Testimonial[] = [
   {
     id: 1,
-    name: "Musharof Chy",
-    designation: "Founder @TailGrids",
+    name: "Ana García",
+    designation: "CEO de Startup Innovadora",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "El equipo de Devuni fue fundamental para lanzar nuestra plataforma web. Su experiencia y dedicación fueron excepcionales. ¡Totalmente recomendados!",
     image: "/images/testimonials/auth-01.png",
     star: 5,
   },
   {
     id: 2,
-    name: "Devid Weilium",
-    designation: "Founder @UIdeck",
+    name: "Carlos Rodríguez",
+    designation: "Gerente de Producto en AppMóvil",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "Desarrollaron nuestra aplicación móvil desde cero con una calidad impresionante. La comunicación fue fluida y el resultado superó nuestras expectativas.",
     image: "/images/testimonials/auth-02.png",
     star: 5,
   },
   {
     id: 3,
-    name: "Lethium Frenci",
-    designation: "Founder @Lineicons",
+    name: "Laura Fernández",
+    designation: "Directora de Operaciones",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "La automatización de procesos que implementaron ha transformado nuestra forma de trabajar, ahorrándonos tiempo y reduciendo errores. Un trabajo impecable.",
     image: "/images/testimonials/auth-03.png",
     star: 5,
   },
@@ -37,8 +37,8 @@ const Testimonials = () => {
     <section className="dark:bg-bg-color-dark bg-gray-light relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="What Our Users Says"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          title="Qué Dicen Nuestros Clientes"
+          paragraph="Nos enorgullece construir relaciones duraderas con nuestros clientes y ayudarles a alcanzar sus metas. Aquí tienes algunas de sus opiniones."
           center
         />
 
