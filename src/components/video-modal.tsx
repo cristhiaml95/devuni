@@ -35,7 +35,11 @@ export default function VideoModal({ isOpen, onClose, ...props }: PropsType) {
           <span className="sr-only">Close modal</span>
           &times;
         </button>
-        <iframe width="100%" height="500" src={src} allowFullScreen />
+        {props.channel === "youtube" ? (
+          <iframe width="100%" height="500" src={src} allowFullScreen />
+        ) : (
+          <video width="100%" height="500" src={src} controls autoPlay loop muted />
+        )}
       </div>
     </div>,
     document.body,

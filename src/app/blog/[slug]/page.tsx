@@ -96,7 +96,7 @@ const BlogDetailsPage = ({ params }) => {
                   </div>
                   <div className="mb-5">
                     {blog.tags.map((tag) => (
-                      <TagButton key={tag} text={tag} />
+                      <TagButton text={tag} />
                     ))}
                   </div>
                 </div>
@@ -121,7 +121,7 @@ const BlogDetailsPage = ({ params }) => {
                       </h4>
                       <div className="flex items-center">
                         {blog.tags.map((tag) => (
-                          <TagButton key={tag} text={tag} />
+                          <TagButton text={tag} />
                         ))}
                       </div>
                     </div>
