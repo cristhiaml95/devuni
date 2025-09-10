@@ -85,7 +85,7 @@ const Testimonials = () => {
               y2="459.865"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#4A6CF7" />
+              <stop offset="0" stopColor="#4A6CF7" />
               <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
             </linearGradient>
             <linearGradient
@@ -96,7 +96,7 @@ const Testimonials = () => {
               y2="675.565"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#4A6CF7" />
+              <stop offset="0" stopColor="#4A6CF7" />
               <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
             </linearGradient>
           </defs>
@@ -137,7 +137,7 @@ const Testimonials = () => {
               y2="8.15715"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#4A6CF7" stopOpacity="0" />
+              <stop offset="0" stopColor="#4A6CF7" stopOpacity="0" />
               <stop offset="1" stopColor="#4A6CF7" />
             </linearGradient>
             <linearGradient
@@ -148,7 +148,7 @@ const Testimonials = () => {
               y2="-2.84285"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#4A6CF7" stopOpacity="0" />
+              <stop offset="0" stopColor="#4A6CF7" stopOpacity="0" />
               <stop offset="1" stopColor="#4A6CF7" />
             </linearGradient>
             <linearGradient
@@ -159,7 +159,7 @@ const Testimonials = () => {
               y2="19.1572"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#4A6CF7" stopOpacity="0" />
+              <stop offset="0" stopColor="#4A6CF7" stopOpacity="0" />
               <stop offset="1" stopColor="#4A6CF7" />
             </linearGradient>
             <linearGradient
@@ -170,7 +170,7 @@ const Testimonials = () => {
               y2="31.1572"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#4A6CF7" stopOpacity="0" />
+              <stop offset="0" stopColor="#4A6CF7" stopOpacity="0" />
               <stop offset="1" stopColor="#4A6CF7" />
             </linearGradient>
           </defs>

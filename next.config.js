@@ -6,6 +6,9 @@ const nextConfig = {
     ],
   },
   output: 'standalone',
+  eslint: {
+    dirs: ['src'],
+  },
   // Permite que el dev server acepte requests desde la Preview de Firebase Studio
   
 };
