@@ -42,7 +42,7 @@ const Contact = () => {
               <h2 className="mb-3 text-2xl font-bold text-black dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
                 Contáctanos
               </h2>
-              <p className="mb-12 text-base font-medium text-body-color">
+              <p className="mb-12 text-base font-medium text-gray-700 dark:text-gray-300">
                 ¿Listo para empezar tu próximo proyecto? Completa el formulario y nos pondremos en contacto contigo para discutir tus ideas.
               </p>
               <form onSubmit={handleSubmit}>

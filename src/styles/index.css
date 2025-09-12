@@ -3,6 +3,13 @@ layer(base);
 
 @import 'tailwindcss';
 
+/* Custom gradient utilities */
+@layer utilities {
+  .bg-gradient-radial {
+    background: radial-gradient(ellipse at center, var(--tw-gradient-stops));
+  }
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme {

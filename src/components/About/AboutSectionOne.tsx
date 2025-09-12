@@ -51,18 +51,41 @@ const AboutSectionOne = () => {
 
             <div className="w-full px-4 lg:w-1/2">
               <div className="relative mx-auto aspect-25/24 max-w-[500px] lg:mr-0">
-                <Image
-                  src="/images/about/about-image.svg"
-                  alt="about-image"
-                  fill
-                  className="mx-auto max-w-full drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
-                />
-                <Image
-                  src="/images/about/about-image-dark.svg"
-                  alt="about-image"
-                  fill
-                  className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none lg:mr-0"
-                />
+                {/* Light mode with radial gradient - clear center */}
+                <div className="relative w-full h-full rounded-3xl p-4 shadow-xl dark:hidden group hover:shadow-2xl transition-all duration-500 overflow-hidden">
+                  {/* Radial gradient background - completely transparent center */}
+                  <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-indigo-100/30 rounded-3xl"></div>
+                  <div className="absolute inset-0 bg-gradient-radial from-white/0 via-white/10 to-blue-50/40 rounded-3xl"></div>
+                  
+                  {/* Corner accents only */}
+                  <div className="absolute top-0 right-0 w-12 h-12 bg-gradient-to-bl from-blue-200/25 to-transparent rounded-tr-3xl"></div>
+                  <div className="absolute bottom-0 left-0 w-12 h-12 bg-gradient-to-tr from-indigo-200/25 to-transparent rounded-bl-3xl"></div>
+                  
+                  <Image
+                    src="/images/about/about-image.png"
+                    alt="about-image"
+                    fill
+                    className="relative z-10 object-contain p-2 group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                
+                {/* Dark mode with radial gradient - clear center */}
+                <div className="relative w-full h-full rounded-3xl p-4 shadow-xl hidden dark:block group hover:shadow-2xl transition-all duration-500 overflow-hidden">
+                  {/* Radial gradient background - completely transparent center */}
+                  <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-gray-800/20 rounded-3xl"></div>
+                  <div className="absolute inset-0 bg-gradient-radial from-gray-900/0 via-gray-900/5 to-gray-700/25 rounded-3xl"></div>
+                  
+                  {/* Corner accents only */}
+                  <div className="absolute top-0 right-0 w-12 h-12 bg-gradient-to-bl from-blue-500/15 to-transparent rounded-tr-3xl"></div>
+                  <div className="absolute bottom-0 left-0 w-12 h-12 bg-gradient-to-tr from-indigo-500/15 to-transparent rounded-bl-3xl"></div>
+                  
+                  <Image
+                    src="/images/about/about-image-dark.png"
+                    alt="about-image"
+                    fill
+                    className="relative z-10 object-contain p-2 group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
               </div>
             </div>
           </div>
