@@ -14,7 +14,7 @@ const Technologies = () => {
         />
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
-            <div className="flex flex-wrap items-center justify-center rounded-xs bg-gray-light px-8 py-8 dark:bg-gray-dark sm:px-10 md:px-[50px] md:py-[40px] xl:p-[50px] 2xl:px-[70px] 2xl:py-[60px]">
+            <div className="flex flex-wrap items-center justify-center rounded-xs bg-gray-50 px-8 py-8 dark:bg-gray-dark sm:px-10 md:px-[50px] md:py-[40px] xl:p-[50px] 2xl:px-[70px] 2xl:py-[60px]">
               {technologiesData.map((tech) => (
                 <SingleTechnology key={tech.id} technology={tech} />
               ))}
@@ -33,7 +33,7 @@ const SingleTechnology = ({ technology }: { technology: Technology }) => {
 
   return (
     <div className="flex w-1/2 items-center justify-center px-3 py-[15px] sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">
-      <div className="text-base text-body-color-dark dark:text-body-color font-semibold">
+      <div className="text-base text-body-color dark:text-body-color-dark font-semibold">
         {name}
       </div>
     </div>

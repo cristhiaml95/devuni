@@ -43,7 +43,7 @@ const Header = () => {
       <header
         className={`header top-0 left-0 z-40 flex w-full items-center ${
           sticky
-            ? "dark:bg-gray-dark dark:shadow-sticky-dark shadow-sticky fixed z-9999 bg-white/80 backdrop-blur-xs transition"
+            ? "dark:bg-gray-800 dark:shadow-sticky-dark shadow-sticky fixed z-9999 bg-[#eaf4fb]/80 backdrop-blur-xs transition"
             : "absolute bg-transparent"
         }`}
       >
@@ -53,18 +53,18 @@ const Header = () => {
               <Link
                 href="/"
                 className={`header-logo block w-full ${
-                  sticky ? "py-5 lg:py-2" : "py-8"
+                  sticky ? "py-1 lg:py-0.5" : "py-2"
                 } `}
               >
                 <Image
-                  src="/images/logo/logo-devuni.svg"
+                  src="/images/logo/devuni-lightmode.png"
                   alt="logo"
                   width={180}
                   height={40}
                   className="w-full dark:hidden"
                 />
                 <Image
-                  src="/images/logo/logo-devuni-dark.svg"
+                  src="/images/logo/devuni-darkmode.png"
                   alt="logo"
                   width={180}
                   height={40}
@@ -98,7 +98,7 @@ const Header = () => {
                 </button>
                 <nav
                   id="navbarCollapse"
-                  className={`navbar border-body-color/50 dark:border-body-color/20 dark:bg-dark absolute right-0 z-30 w-[250px] rounded border-[.5px] bg-white px-6 py-4 duration-300 lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
+                  className={`navbar border-body-color/50 dark:border-body-color/20 dark:bg-gray-800 absolute right-0 z-30 w-[250px] rounded border-[.5px] bg-[#eaf4fb] px-6 py-4 duration-300 lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
                     navbarOpen
                       ? "visibility top-full opacity-100"
                       : "invisible top-[120%] opacity-0"
@@ -110,10 +110,10 @@ const Header = () => {
                         {menuItem.path ? (
                           <Link
                             href={menuItem.path}
-                            className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
+                            className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-2 ${
                               usePathName === menuItem.path
                                 ? "text-primary dark:text-white"
-                                : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
+                                : "text-dark hover:text-primary dark:text-gray-300 dark:hover:text-white"
                             }`}
                           >
                             {menuItem.title}
@@ -122,7 +122,7 @@ const Header = () => {
                           <>
                             <p
                               onClick={() => handleSubmenu(index)}
-                              className="text-dark group-hover:text-primary flex cursor-pointer items-center justify-between py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 dark:text-white/70 dark:group-hover:text-white"
+                              className="text-dark group-hover:text-primary flex cursor-pointer items-center justify-between py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-2 dark:text-gray-300 dark:group-hover:text-white"
                             >
                               {menuItem.title}
                               <span className="pl-3">
@@ -137,7 +137,7 @@ const Header = () => {
                               </span>
                             </p>
                             <div
-                              className={`submenu dark:bg-dark relative top-full left-0 rounded-sm bg-white transition-[top] duration-300 group-hover:opacity-100 lg:invisible lg:absolute lg:top-[110%] lg:block lg:w-[250px] lg:p-4 lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${
+                              className={`submenu dark:bg-gray-800 relative top-full left-0 rounded-sm bg-[#eaf4fb] transition-[top] duration-300 group-hover:opacity-100 lg:invisible lg:absolute lg:top-[110%] lg:block lg:w-[250px] lg:p-4 lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${
                                 openIndex === index ? "block" : "hidden"
                               }`}
                             >
@@ -145,7 +145,7 @@ const Header = () => {
                                 <Link
                                   href={submenuItem.path}
                                   key={index}
-                                  className="text-dark hover:text-primary block rounded-sm py-2.5 text-sm lg:px-3 dark:text-white/70 dark:hover:text-white"
+                                  className="text-dark hover:text-primary block rounded-sm py-2.5 text-sm lg:px-3 dark:text-gray-300 dark:hover:text-white"
                                 >
                                   {submenuItem.title}
                                 </Link>

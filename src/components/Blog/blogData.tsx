@@ -9,7 +9,7 @@ const blogData: Blog[] = [
     image: "/images/blog/blog-01.jpg",
     author: {
       name: "Javier Gómez",
-      image: "/images/blog/author-01.png",
+      image: "/images/blog/author-02.png",
       designation: "Desarrollador Frontend",
     },
     tags: ["Next.js", "Web"],

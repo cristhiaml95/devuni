@@ -8,6 +8,12 @@ const getBlog = (id: number) => {
   return blogData.find((blog) => blog.id === id);
 };
 
+export const generateStaticParams = () => {
+  return blogData.map((blog) => ({
+    slug: blog.id.toString(),
+  }));
+};
+
 export const generateMetadata = ({ params }): Metadata => {
   const id = parseInt(params.slug);
   const blog = getBlog(id);

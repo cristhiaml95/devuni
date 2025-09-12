@@ -5,17 +5,22 @@ import Breadcrumb from "@/components/Common/Breadcrumb";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog Page | Free Next.js Template for Startup and SaaS",
-  description: "This is Blog Page for Startup Nextjs Template",
-  // other metadata
+  title: "Blog | Devuni - Artículos sobre Desarrollo de Software y Tecnología",
+  description: "Descubre las últimas tendencias en desarrollo de software, diseño web, aplicaciones móviles y tecnología. Consejos y guías de expertos en Devuni.",
+  keywords: "blog tecnología, desarrollo software, programación, diseño web, aplicaciones móviles, automatización, devuni blog",
+  openGraph: {
+    title: "Blog | Devuni - Artículos sobre Desarrollo de Software y Tecnología",
+    description: "Descubre las últimas tendencias en desarrollo de software, diseño web, aplicaciones móviles y tecnología.",
+    type: "website",
+  },
 };
 
 const Blog = () => {
   return (
     <>
       <Breadcrumb
-        pageName="Blog Grid"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
+        pageName="Nuestro Blog"
+        description="Explora artículos sobre las últimas tendencias en tecnología, desarrollo de software, diseño web y estrategias digitales que impulsan los negocios."
       />
 
       <section className="pt-[120px] pb-[120px]">

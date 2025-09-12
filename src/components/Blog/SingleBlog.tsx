@@ -6,7 +6,7 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
   const { title, image, paragraph, author, tags, publishDate } = blog;
   return (
     <>
-      <div className="group shadow-one hover:shadow-two dark:bg-dark dark:hover:shadow-gray-dark relative overflow-hidden rounded-xs bg-white duration-300">
+  <div className="group shadow-one hover:shadow-two dark:bg-[#1e3a5f] dark:hover:shadow-gray-dark relative overflow-hidden rounded-xs bg-[#eaf4fb] duration-300">
         <Link
           href={`/blog/${blog.id}`}
           className="relative block aspect-37/22 w-full"
@@ -25,7 +25,7 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
               {title}
             </Link>
           </h3>
-          <p className="border-body-color/10 text-body-color mb-6 border-b pb-6 text-base font-medium dark:border-white/10">
+          <p className="border-body-color/10 text-body-color dark:text-body-color-dark mb-6 border-b pb-6 text-base font-medium dark:border-white/10">
             {paragraph}
           </p>
           <div className="flex items-center">
@@ -39,14 +39,14 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
                 <h4 className="text-dark mb-1 text-sm font-medium dark:text-white">
                   By {author.name}
                 </h4>
-                <p className="text-body-color text-xs">{author.designation}</p>
+                <p className="text-body-color dark:text-body-color-dark text-xs">{author.designation}</p>
               </div>
             </div>
             <div className="inline-block">
               <h4 className="text-dark mb-1 text-sm font-medium dark:text-white">
                 Date
               </h4>
-              <p className="text-body-color text-xs">{publishDate}</p>
+              <p className="text-body-color dark:text-body-color-dark text-xs">{publishDate}</p>
             </div>
           </div>
         </div>

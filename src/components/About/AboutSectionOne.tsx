@@ -9,7 +9,7 @@ const checkIcon = (
 
 const AboutSectionOne = () => {
   const List = ({ text }) => (
-    <p className="text-body-color mb-5 flex items-center text-lg font-medium">
+    <p className="text-body-color dark:text-body-color-dark mb-5 flex items-center text-lg font-medium">
       <span className="bg-primary/10 text-primary mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md">
         {checkIcon}
       </span>
@@ -18,7 +18,7 @@ const AboutSectionOne = () => {
   );
 
   return (
-    <section id="about" className="pt-16 md:pt-20 lg:pt-28">
+    <section id="about" className="bg-gray-50 dark:bg-gray-900 pt-16 md:pt-20 lg:pt-28">
       <div className="container">
         <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap items-center">

@@ -5,17 +5,22 @@ import Breadcrumb from "@/components/Common/Breadcrumb";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Page | Free Next.js Template for Startup and SaaS",
-  description: "This is About Page for Startup Nextjs Template",
-  // other metadata
+  title: "Sobre Nosotros | Devuni - Tu Partner en Desarrollo de Software",
+  description: "Conoce a Devuni, tu socio tecnológico especializado en desarrollo de software a medida, aplicaciones web y móviles. Más de X años de experiencia creando soluciones digitales innovadoras.",
+  keywords: "sobre devuni, empresa desarrollo software, equipo tecnológico, desarrollo web, aplicaciones móviles, automatización",
+  openGraph: {
+    title: "Sobre Nosotros | Devuni - Tu Partner en Desarrollo de Software",
+    description: "Conoce a Devuni, tu socio tecnológico especializado en desarrollo de software a medida, aplicaciones web y móviles.",
+    type: "website",
+  },
 };
 
 const AboutPage = () => {
   return (
     <>
       <Breadcrumb
-        pageName="About Page"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
+        pageName="Sobre Nosotros"
+        description="Conoce a Devuni, tu socio tecnológico especializado en crear soluciones digitales innovadoras que impulsan el crecimiento de tu negocio."
       />
       <AboutSectionOne />
       <AboutSectionTwo />

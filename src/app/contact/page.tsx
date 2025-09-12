@@ -4,17 +4,22 @@ import Contact from "@/components/Contact";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Page | Free Next.js Template for Startup and SaaS",
-  description: "This is Contact Page for Startup Nextjs Template",
-  // other metadata
+  title: "Contacto | Devuni - Presupuesto Gratuito para tu Proyecto",
+  description: "¿Tienes un proyecto en mente? Contacta con Devuni para obtener un presupuesto gratuito y personalizado. Desarrollamos software a medida, webs y apps móviles.",
+  keywords: "contacto devuni, presupuesto desarrollo software, cotización web, desarrollo aplicaciones, consulta tecnológica",
+  openGraph: {
+    title: "Contacto | Devuni - Presupuesto Gratuito para tu Proyecto",
+    description: "¿Tienes un proyecto en mente? Contacta con Devuni para obtener un presupuesto gratuito y personalizado.",
+    type: "website",
+  },
 };
 
 const ContactPage = () => {
   return (
     <>
       <Breadcrumb
-        pageName="Contact Page"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
+        pageName="Contacto"
+        description="¿Tienes un proyecto en mente? Nos encantaría conocer tu idea. Contáctanos para obtener un presupuesto personalizado y sin compromiso."
       />
 
       <Contact />

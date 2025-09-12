@@ -4,8 +4,10 @@ const nextConfig = {
     remotePatterns: [
       { protocol: 'https', hostname: 'cdn.sanity.io', port: '' },
     ],
+    unoptimized: true
   },
-  output: 'standalone',
+  output: 'export',
+  trailingSlash: true,
   eslint: {
     dirs: ['src'],
   },

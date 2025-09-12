@@ -342,12 +342,12 @@ const BlogSidebarPage = () => {
               </div>
             </div>
             <div className="w-full px-4 lg:w-4/12">
-              <div className="shadow-three dark:bg-gray-dark mt-12 mb-10 rounded-xs bg-white p-6 lg:mt-0 dark:shadow-none">
+              <div className="shadow-three dark:bg-[#1e3a5f] mt-12 mb-10 rounded-xs bg-[#eaf4fb] p-6 lg:mt-0 dark:shadow-none">
                 <div className="flex items-center justify-between">
                   <input
                     type="text"
                     placeholder="Search here..."
-                    className="border-stroke dark:text-body-color-dark dark:shadow-two text-body-color focus:border-primary dark:focus:border-primary mr-4 w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base outline-hidden transition-all duration-300 dark:border-transparent dark:bg-[#2C303B] dark:focus:shadow-none"
+                    className="border-stroke dark:text-body-color-dark dark:shadow-two text-body-color focus:border-primary dark:focus:border-primary mr-4 w-full rounded-xs border bg-[#d6e8f7] px-6 py-3 text-base outline-hidden transition-all duration-300 dark:border-transparent dark:bg-[#2d4a6b] dark:focus:shadow-none"
                   />
                   <button
                     aria-label="search button"
@@ -368,7 +368,7 @@ const BlogSidebarPage = () => {
                   </button>
                 </div>
               </div>
-              <div className="shadow-three dark:bg-gray-dark mb-10 rounded-xs bg-white dark:shadow-none">
+              <div className="shadow-three dark:bg-[#1e3a5f] mb-10 rounded-xs bg-[#eaf4fb] dark:shadow-none">
                 <h3 className="border-body-color/10 border-b px-8 py-4 text-lg font-semibold text-black dark:border-white/10 dark:text-white">
                   Related Posts
                 </h3>
@@ -399,7 +399,7 @@ const BlogSidebarPage = () => {
                   </li>
                 </ul>
               </div>
-              <div className="shadow-three dark:bg-gray-dark mb-10 rounded-xs bg-white dark:shadow-none">
+              <div className="shadow-three dark:bg-[#1e3a5f] mb-10 rounded-xs bg-[#eaf4fb] dark:shadow-none">
                 <h3 className="border-body-color/10 border-b px-8 py-4 text-lg font-semibold text-black dark:border-white/10 dark:text-white">
                   Popular Category
                 </h3>
@@ -446,7 +446,7 @@ const BlogSidebarPage = () => {
                   </li>
                 </ul>
               </div>
-              <div className="shadow-three dark:bg-gray-dark mb-10 rounded-xs bg-white dark:shadow-none">
+              <div className="shadow-three dark:bg-[#1e3a5f] mb-10 rounded-xs bg-[#eaf4fb] dark:shadow-none">
                 <h3 className="border-body-color/10 border-b px-8 py-4 text-lg font-semibold text-black dark:border-white/10 dark:text-white">
                   Popular Tags
                 </h3>

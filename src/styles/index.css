@@ -18,13 +18,13 @@ layer(base);
   --color-transparent: transparent;
   --color-white: #ffffff;
   --color-black: #121723;
-  --color-dark: #1d2430;
-  --color-primary: #4a6cf7;
-  --color-yellow: #fbb040;
-  --color-bg-color-dark: #171c28;
+  --color-dark: #1f2937;
+  --color-primary: #0074e0;
+  --color-yellow: #ffcc40;
+  --color-bg-color-dark: #1f2937;
 
-  --color-body-color: #788293;
-  --color-body-color-dark: #959cb1;
+  --color-body-color: #374151;
+  --color-body-color-dark: #e5e7eb;
 
   --color-stroke-stroke: #e3e8ef;
   --color-stroke-dark: #353943;
