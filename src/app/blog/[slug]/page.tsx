@@ -1,5 +1,7 @@
 import SharePost from "@/components/Blog/SharePost";
 import TagButton from "@/components/Blog/TagButton";
+import ExternalResources from "@/components/Blog/ExternalResources";
+import ShareButtons from "@/components/Social/ShareButtons";
 import Image from "next/image";
 import { Metadata } from "next";
 import blogData from "@/components/Blog/blogData";
@@ -120,7 +122,24 @@ const BlogDetailsPage = ({ params }) => {
                       />
                     </div>
                   </div>
-                  <div className="items-center justify-between sm:flex">
+                  <div 
+                    className="prose prose-lg max-w-none text-body-color dark:text-white"
+                    dangerouslySetInnerHTML={{ __html: blog.content }}
+                  />
+                  
+                  {/* Recursos externos según el ID del blog */}
+                  {blog.id === 1 && <ExternalResources category="web" />}
+                  {blog.id === 2 && <ExternalResources category="mobile" />}
+                  {blog.id === 3 && <ExternalResources category="automation" />}
+                  
+                  {/* Botones de redes sociales */}
+                  <div className="mb-8">
+                    <ShareButtons 
+                      title={blog.title}
+                      description={blog.paragraph}
+                    />
+                  </div>
+                  <div className="items-center justify-between sm:flex mt-10">
                     <div className="mb-5">
                       <h4 className="text-body-color mb-3 text-sm font-medium">
                         Popular Tags :

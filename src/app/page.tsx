@@ -13,7 +13,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Devuni | Desarrollo de Software a Medida, Web y Móvil",
-  description: "Devuni es tu partner tecnológico para el desarrollo de webs, mobile apps, automatizaciones y sistemas a medida. Impulsamos tu negocio con soluciones innovadoras.",
+  description: "Desarrollamos webs, apps móviles, automatizaciones y sistemas a medida. Tu socio tecnológico para soluciones innovadoras.",
 };
 
 export default function Home() {

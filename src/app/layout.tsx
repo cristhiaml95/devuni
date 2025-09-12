@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     template: '%s | Devuni',
   },
   description:
-    'Devuni es tu partner tecnológico para el desarrollo de webs, mobile apps, automatizaciones y sistemas a medida. Impulsamos tu negocio con soluciones innovadoras.',
+    'Desarrollamos webs, apps móviles, automatizaciones y sistemas a medida. Impulsamos tu negocio con soluciones digitales innovadoras.',
   keywords: [
     'desarrollo web',
     'aplicaciones móviles',
@@ -50,9 +50,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html suppressHydrationWarning lang="en">
+    <html suppressHydrationWarning lang="es">
       <head>
-  <link rel="icon" href="/images/favicon-devuni.png" sizes="any" />
+        <meta httpEquiv="Content-Language" content="es" />
+        <link rel="icon" href="/images/favicon-devuni.png" sizes="any" />
+        <link rel="apple-touch-icon" href="/images/favicon-devuni.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon-devuni.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/images/favicon-devuni.png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon-devuni.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/images/favicon-devuni.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/favicon-devuni.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon-devuni.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon-devuni.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-devuni.png" />
       </head>
 
       <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>

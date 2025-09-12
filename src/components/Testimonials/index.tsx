@@ -5,29 +5,20 @@ import SingleTestimonial from "./SingleTestimonial";
 const testimonialData: Testimonial[] = [
   {
     id: 1,
-    name: "Ana García",
-    designation: "CEO de Startup Innovadora",
+    name: "Ted",
+    designation: "Technical Project Lead",
     content:
-      "El equipo de Devuni fue fundamental para lanzar nuestra plataforma web. Su experiencia y dedicación fueron excepcionales. ¡Totalmente recomendados!",
-    image: "/images/testimonials/auth-01.png",
+      "Cristhiam is a very talented fullstack developer. He has a strong work ethic, excellent communication skills in english and spanish, is dependable, and is able to tackle complex development problems. Working with Cristhiam was an outstanding experience. He brings a combination of technical expertise and deep problem solving that enhanced our project. On the software side, he quickly understands business objectives and translate them into a clean solutions. His skills with Firebase, Flutterflow, and Python scripts were very good, and he handled backend configuration very well. He also provided strategic insights that improved our overall workflow. What impressed us most was his ability to balance user experience with business goals. He worked fast without compromising quality, communicated clearly throughout the process, and was always available and accessible. It's also clear from his engineering background that he approaches problems with precision and analyticals, which gave us confidence in the technical solutions he proposed. We absolutely recommend Cristhiam to anyone needing a skilled and dependable developer.",
+    image: "/images/testimonials/ted.png",
     star: 5,
   },
   {
     id: 2,
-    name: "Carlos Rodríguez",
-    designation: "Gerente de Producto en AppMóvil",
+    name: "Damjan",
+    designation: "Operations Director",
     content:
-      "Desarrollaron nuestra aplicación móvil desde cero con una calidad impresionante. La comunicación fue fluida y el resultado superó nuestras expectativas.",
-    image: "/images/testimonials/auth-02.png",
-    star: 5,
-  },
-  {
-    id: 3,
-    name: "Laura Fernández",
-    designation: "Directora de Operaciones",
-    content:
-      "La automatización de procesos que implementaron ha transformado nuestra forma de trabajar, ahorrándonos tiempo y reduciendo errores. Un trabajo impecable.",
-    image: "/images/testimonials/auth-03.png",
+      "We joined forces with Cristhiam to transform and modernize our Excel/Google Sheets-based warehouse management system, which was becoming increasingly messy and unmanageable as our operations grew. The goal was to turn it into a fully custom web and mobile app tailored to our specific needs. What initially seemed like a relatively straightforward project quickly revealed itself to be much more complex due to the intricacies of our internal processes and workflows. Despite the challenges and inevitable delays on both sides, Cristhiam remained professional, patient, and incredibly adaptable throughout the entire journey. He consistently responded to changes, supported extensive testing, and implemented improvements with a positive attitude and technical confidence. His calm approach and commitment to quality made a real difference, especially during moments when things got tricky. Today, the application he built is absolutely essential to our daily operations – we truly can't imagine working without it anymore. We are very grateful for his hard work and dedication. I highly recommend Cristhiam to anyone looking for a reliable, skilled, and collaborative developer. He deserves many more great projects ahead!",
+    image: "/images/testimonials/damjan.png",
     star: 5,
   },
 ];
@@ -42,7 +33,7 @@ const Testimonials = () => {
           center
         />
 
-        <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 justify-items-center">
           {testimonialData.map((testimonial) => (
             <SingleTestimonial key={testimonial.id} testimonial={testimonial} />
           ))}
