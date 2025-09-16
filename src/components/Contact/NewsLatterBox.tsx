@@ -71,7 +71,6 @@ const NewsLatterBox = () => {
       ) : user ? (
         <div className="space-y-4">
           <UserProfile className="mb-4" showSignOut={true} />
-          
           {message && (
             <div className={`rounded-xs p-3 text-sm ${
               message.includes("Error") 
@@ -81,14 +80,8 @@ const NewsLatterBox = () => {
               {message}
             </div>
           )}
-          
-          <button
-            onClick={handleSubscribe}
-            disabled={isSubscribing}
-            className="w-full rounded-xs bg-primary px-6 py-3 text-base font-medium text-white transition-all duration-300 hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-50"
-          >
-            {isSubscribing ? "Suscribiendo..." : "Suscribirse al Boletín"}
-          </button>
+          {/* El usuario autenticado ya está suscrito, no mostrar botón */}
+          <div className="text-green-700 dark:text-green-300 text-sm font-medium">Ya eres parte del boletín.</div>
         </div>
       ) : (
         <div className="space-y-6">
@@ -98,41 +91,6 @@ const NewsLatterBox = () => {
               className="w-full justify-center"
             />
           </div>
-          
-          <div className="relative">
-            <div className="absolute inset-0 flex items-center">
-              <div className="w-full border-t border-gray-300 dark:border-gray-600"></div>
-            </div>
-            <div className="relative flex justify-center text-sm">
-              <span className="bg-[#eaf4fb] dark:bg-gray-800 px-2 text-gray-500 dark:text-gray-400">
-                o suscríbete manualmente
-              </span>
-            </div>
-          </div>
-
-          <form onSubmit={handleManualSubmit}>
-            <input
-              type="text"
-              name="name"
-              placeholder="Tu nombre"
-              className="border-stroke text-body-color focus:border-primary dark:text-body-color-dark dark:shadow-two dark:focus:border-primary mb-4 w-full rounded-xs border bg-[#d6e8f7] px-6 py-3 text-base outline-hidden dark:border-transparent dark:bg-[#2d4a6b] dark:text-body-color-dark dark:shadow-two dark:focus:shadow-none"
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Tu email"
-              required
-              className="border-stroke text-body-color focus:border-primary dark:text-body-color-dark dark:shadow-two dark:focus:border-primary mb-4 w-full rounded-xs border bg-[#d6e8f7] px-6 py-3 text-base outline-hidden dark:border-transparent dark:bg-[#2d4a6b] dark:text-body-color-dark dark:shadow-two dark:focus:shadow-none"
-            />
-            <button
-              type="submit"
-              disabled={isSubscribing}
-              className="bg-primary shadow-submit hover:bg-primary/90 dark:shadow-submit-dark mb-5 flex w-full cursor-pointer items-center justify-center rounded-xs px-9 py-4 text-base font-medium text-white duration-300 disabled:opacity-50"
-            >
-              {isSubscribing ? "Suscribiendo..." : "Suscribirme"}
-            </button>
-          </form>
-          
           {message && (
             <div className={`rounded-xs p-3 text-sm ${
               message.includes("Error") 
