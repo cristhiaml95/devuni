@@ -1,6 +1,8 @@
 "use client";
 
+
 import NewsLatterBox from "./NewsLatterBox";
+import { supabase } from "@/lib/supabase";
 
 const Contact = () => {
   const handleSubmit = async (event) => {
@@ -9,23 +11,48 @@ const Contact = () => {
     const data = Object.fromEntries(formData.entries());
 
     try {
-      const response = await fetch(process.env.NEXT_PUBLIC_FIREBASE_CONTACT_FUNCTION_URL, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
+      // 1. Buscar o crear contacto
+      let { data: contact, error } = await supabase
+        .from('contacts')
+        .select('id')
+        .eq('email', data.email)
+        .single();
 
-      if (response.ok) {
-        alert('Mensaje enviado exitosamente!');
-        event.target.reset(); // Clear form
-      } else {
-        alert('Error al enviar el mensaje.');
+      if (!contact) {
+        const { data: newContact, error: createError } = await supabase
+          .from('contacts')
+          .insert([
+            {
+              email: data.email,
+              full_name: data.full_name,
+              phone: data.phone,
+              company_name: data.company_name,
+            },
+          ])
+          .select('id')
+          .single();
+        if (createError) throw createError;
+        contact = newContact;
       }
+
+      // 2. Insertar mensaje
+      const { error: msgError } = await supabase
+        .from('contact_messages')
+        .insert([
+          {
+            contact_id: contact.id,
+            message: data.message,
+            source: 'web',
+            // Puedes agregar ip y user_agent si los tienes disponibles
+          },
+        ]);
+      if (msgError) throw msgError;
+
+      alert('Mensaje enviado exitosamente!');
+      event.target.reset();
     } catch (error) {
       console.error('Error de envío:', error);
-      alert('Ocurrió un error.');
+      alert('Ocurrió un error al enviar el mensaje.');
     }
   };
 
@@ -75,6 +102,38 @@ const Contact = () => {
                         type="email"
                         name="email"
                         placeholder="Ingresa tu email"
+                        className="border-stroke w-full rounded-xs border bg-[#d6e8f7] px-6 py-3 text-base text-body-color outline-hidden focus:border-primary dark:border-transparent dark:bg-[#2d4a6b] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+                      />
+                    </div>
+                  </div>
+                  <div className="w-full px-4 md:w-1/2">
+                    <div className="mb-8">
+                      <label
+                        htmlFor="phone"
+                        className="mb-3 block text-sm font-medium text-dark dark:text-white"
+                      >
+                        Tu Teléfono
+                      </label>
+                      <input
+                        type="tel"
+                        name="phone"
+                        placeholder="Ingresa tu número de teléfono"
+                        className="border-stroke w-full rounded-xs border bg-[#d6e8f7] px-6 py-3 text-base text-body-color outline-hidden focus:border-primary dark:border-transparent dark:bg-[#2d4a6b] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+                      />
+                    </div>
+                  </div>
+                  <div className="w-full px-4 md:w-1/2">
+                    <div className="mb-8">
+                      <label
+                        htmlFor="company"
+                        className="mb-3 block text-sm font-medium text-dark dark:text-white"
+                      >
+                        Empresa (Opcional)
+                      </label>
+                      <input
+                        type="text"
+                        name="company"
+                        placeholder="Nombre de tu empresa"
                         className="border-stroke w-full rounded-xs border bg-[#d6e8f7] px-6 py-3 text-base text-body-color outline-hidden focus:border-primary dark:border-transparent dark:bg-[#2d4a6b] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                       />
                     </div>

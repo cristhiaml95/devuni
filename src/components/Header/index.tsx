@@ -5,8 +5,12 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
+import { useAuth } from "@/contexts/AuthContext";
+import { UserProfile } from "@/components/Auth/GoogleAuth";
 
 const Header = () => {
+  const { user, loading } = useAuth();
+  
   // Navbar toggle
   const [navbarOpen, setNavbarOpen] = useState(false);
   const navbarToggleHandler = () => {
@@ -158,8 +162,15 @@ const Header = () => {
                   </ul>
                 </nav>
               </div>
-              <div className="flex items-center justify-end pr-16 lg:pr-0">
-                
+              <div className="flex items-center justify-end space-x-4 pr-16 lg:pr-0">
+                {!loading && (
+                  <div className="hidden sm:block">
+                    <UserProfile 
+                      showSignOut={false}
+                      className="text-sm"
+                    />
+                  </div>
+                )}
                 <div>
                   <ThemeToggler />
                 </div>

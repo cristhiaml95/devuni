@@ -98,7 +98,7 @@ const Footer = () => {
               <p className="text-body-color dark:text-body-color-dark text-sm">Síguenos en:</p>
               <div className="flex space-x-3">
                 <a
-                  href="https://facebook.com/devuni"
+                  href="https://www.facebook.com/DevuniOficial/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-body-color hover:text-primary dark:text-body-color-dark dark:hover:text-primary transition-colors duration-200"
@@ -131,7 +131,7 @@ const Footer = () => {
                   </svg>
                 </a>
                 <a
-                  href="https://instagram.com/devuni"
+                  href="https://www.instagram.com/devunioficial"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-body-color hover:text-primary dark:text-body-color-dark dark:hover:text-primary transition-colors duration-200"
